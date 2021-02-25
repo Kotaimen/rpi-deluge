@@ -2,13 +2,14 @@ name: ci
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
 
   deluge:
     name: Deluge
     runs-on: ubuntu-latest
+    environment: prod
     steps:
       - name: Setup QEMU
         uses: docker/setup-qemu-action@v1
@@ -36,6 +37,7 @@ jobs:
   samba:
     name: Samba
     runs-on: ubuntu-latest
+    environment: prod
     steps:
       - name: Setup QEMU
         uses: docker/setup-qemu-action@v1
