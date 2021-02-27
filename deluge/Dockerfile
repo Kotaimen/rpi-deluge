@@ -26,6 +26,7 @@ RUN apt-get -yq update && \
         python3-libtorrent \
         python3-pip \      
         python3-pillow \
+        python3-twisted \
         libssl-dev \
         libtorrent-dev \
         libffi-dev \
