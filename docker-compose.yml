@@ -3,9 +3,7 @@ version: '3'
 services: 
 
   deluge:
-    build: 
-      context: deluge
-      dockerfile: Dockerfile
+    image: kotaimen/deluge
     volumes:
       - ./config:/root/.config/deluge
       - ./downloads:/root/Downloads
@@ -16,9 +14,7 @@ services:
     command:  ['-i', '0.0.0.0', '-p', '8112', '-L', 'INFO']
   
   samba:
-    build: 
-      context: samba
-      dockerfile: Dockerfile
+    image: kotaimen/samba
     ports: 
       - "139:139"
       - "445:445"
