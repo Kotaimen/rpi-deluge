@@ -6,7 +6,7 @@ on:
 
 jobs:
 
-  deluge:
+  bake:
     name: Deluge
     runs-on: ubuntu-latest
     environment: prod
@@ -26,6 +26,6 @@ jobs:
       - 
         name: Build and push
         id: docker_build
-        uses: docker/bake-action@1.4.2
+        uses: docker/bake-action@v1.4.2
         with:
           push: true
