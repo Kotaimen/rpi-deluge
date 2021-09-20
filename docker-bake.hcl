@@ -1,12 +1,12 @@
 group "default" {
 	targets = [
-      "deluge",
-      "samba"
+      "deluge", 
+#      "samba"
       ]
 }
 
 target "deluge" {
-   context = "./deluge"
+   context = "docker/deluge"
 	dockerfile = "Dockerfile"
    platforms = [
       "linux/amd64", 
@@ -18,7 +18,7 @@ target "deluge" {
 }
 
 target "samba" {
-   context = "./samba"
+   context = "docker/samba"
 	dockerfile = "Dockerfile"
    platforms = [
       "linux/amd64", 
