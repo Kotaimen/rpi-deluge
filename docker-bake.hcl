@@ -1,7 +1,7 @@
 group "default" {
 	targets = [
       "deluge", 
-#      "samba"
+      "samba"
       ]
 }
 
