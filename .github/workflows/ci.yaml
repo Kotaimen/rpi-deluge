@@ -31,6 +31,6 @@ jobs:
       - 
         name: Build and push
         id: docker_build
-        uses: docker/bake-action@v1.6.0
+        uses: docker/bake-action@v1.7.0
         with:
           push: true
