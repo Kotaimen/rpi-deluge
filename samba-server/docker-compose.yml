@@ -8,8 +8,8 @@ services:
       - "139:139"
       - "445:445"
       - "137:137/udp"
-      - "138:138/udp"      
+      - "138:138/udp"
     volumes:
-      - /mnt/m2/downloads:/downloads
-    restart: unless-stopped      
-    command: ["-w", "RASP", "-s", "Downloads;/downloads;readonly", "-p"]
+      - /mnt/m2/downloads:/downloads:ro
+    restart: unless-stopped
+    command: ["-w", "RASP", "-s", "Downloads;/downloads;yes;yes", "-p"]
