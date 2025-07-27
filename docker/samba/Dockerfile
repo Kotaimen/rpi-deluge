@@ -1,4 +1,4 @@
-FROM alpine:3
+FROM public.ecr.aws/docker/library/alpine:3
 
 # RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 
