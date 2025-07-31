@@ -10,11 +10,9 @@ target "deluge" {
 	dockerfile = "Dockerfile"
    platforms = [
       "linux/amd64", 
-      "linux/arm64", 
-      "linux/arm/v6", 
-      "linux/arm/v7" 
+      "linux/arm64"
    ]
-   tags = ["docker.io/kotaimen/deluge:latest"]
+   tags = ["ghcr.io/kotaimen/rpi-deluge/deluge:latest"]
 }
 
 target "samba" {
@@ -22,9 +20,7 @@ target "samba" {
 	dockerfile = "Dockerfile"
    platforms = [
       "linux/amd64", 
-      "linux/arm64", 
-      "linux/arm/v6", 
-      "linux/arm/v7" 
+      "linux/arm64"
    ]
-   tags = ["docker.io/kotaimen/samba:latest"]
+   tags = ["ghcr.io/kotaimen/rpi-deluge/samba:latest"]
 }

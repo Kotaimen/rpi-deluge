@@ -3,7 +3,7 @@ version: '3'
 services: 
 
   deluge:
-    image: kotaimen/deluge
+    image: ghcr.io/kotaimen/rpi-delugs/deluge
     volumes:
       - ./config:/root/.config/deluge
       - /mnt/m2/downloads:/root/Downloads
