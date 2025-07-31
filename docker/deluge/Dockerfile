@@ -1,5 +1,5 @@
-ARG DEBIAN_VERSION=bookworm
-FROM public.ecr.aws/docker/library/debian:${DEBIAN_VERSION}
+ARG DEBIAN_VERSION=bullseye
+FROM debian:${DEBIAN_VERSION}
 ARG DEBIAN_VERSION
 ARG DELUGE_VERSION=2.2.0
 
@@ -9,9 +9,15 @@ VOLUME ["/root/.config/deluge", "/root/Downloads"]
 
 RUN apt-get -yq update && \
     apt-get -yq install \
-        pipx python3-dev gcc \
+        python3-libtorrent \
+        python3-pip \      
+        python3-pillow \
+        python3-twisted \
+        python3-rencode \
+        libssl-dev \
         libtorrent-dev \
+        libffi-dev \
         && \
-    pipx install --verbose deluge==${DELUGE_VERSION}
+    pip3 install --no-cache-dir deluge==${DELUGE_VERSION}
 
-ENTRYPOINT ["/root/.local/bin/deluge-web", "-d"]
+ENTRYPOINT ["deluge-web", "-d"]
